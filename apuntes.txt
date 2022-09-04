@@ -1,0 +1,42 @@
+1.- crear carpeta
+2.- en la terminal hacer cd a la carpeta y ejecutar npm init
+3.- obtenemos el package.json dentro de la carpeta
+
+4.- creamos el archivo index.js. Para ver si está node bien instalado
+    escribimos un console.log en el index y ejecutamos en la terminal
+    con el cd de esta carpeta node index.js
+5.- instalar nodemon para ver los cambios de node mas facilmente si tener que 
+    estar ejecutando el comando todo el tiempo.
+6.- hacemos la instalacion con npm install -g nodemon y luego de nuevo nodemon index.js
+    ctrl-c para limpiar la terminal
+
+7. creamos los scripts: "dev": "nodemon index.js",
+                        "start": "node index.js"
+    En desarrollo usaremos dev y en produccion start
+8. en la terminal npm run dev. Para ejecutar el start no poner run, es especial
+    seria npm start
+
+9.  instalaciones para el backend en la terminal:
+    npm i bcryptjs cors dotenv express express-validator jsonwebtoken mongoose
+10. para hacer una instalacion de version especifica:
+    npm i express@4.17.1
+11. bcryptjs para encriptar la contraseña.
+    cors para que el servidor acepte peticiones de otros dominios.
+    dotenv para variables de entorno.
+    express.
+    jsonwebtoken para generar tokens.
+    mongoose para interactuar con mongoDB.
+
+12. hacemos import del express y llamamos al servidor con listen
+    al hacer el npm run dev nos devuelve el mensaje del puerto.
+    Si metemos el localhost:4000 en postman en preview nos va a devolver
+    un Cannot GET, porque no tenemos definida ruta aun pero esta bien.
+
+
+13. En el req de las rutas, al poneer req.body recibiremos un objeto vacio
+    nos vamos a postman y seleccionamos la pestaña de body-raw-json
+    dentro escribimos el json  {
+                                    "name": "Test1",
+                                    "email": "test1@test.com",
+                                    "password": "123456"
+                                }
